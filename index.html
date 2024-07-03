@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> Image Slider </h1>
+
+    <!-- Slider frame -->
+    <div class="sliderFrame">
+        <!-- Images -->
+        <img src="images/1.jpg" alt="" class="slideImages">
+        <img src="images/2.jpg" alt="" class="slideImages">
+        <img src="images/3.jpg" alt="" class="slideImages">
+        <img src="images/4.jpg" alt="" class="slideImages">
+        <img src="images/5.jpg" alt="" class="slideImages">
+
+        <!-- Buttons -->
+        <button class="buttonL" onclick="btnFunc(-1)">&#10094;</button>
+        <button class="buttonR" onclick="btnFunc(1)">&#10095;</button>
+
+        <!-- Page indicator and slideshow button -->
+        <div class="pageIndicator">
+            <p>1/5</p>
+            <button class="slideshowBtn", onclick="slideshowFunc()">⏵</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

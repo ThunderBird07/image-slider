@@ -1,0 +1,161 @@
+* {
+    /* Resetting margin and padding to 0 */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Setting the body to be 100% width and 100% height, then aligning everything inside it to the center */
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    overflow: hidden;
+}
+
+h1 {
+    /* Set font of heading and position */
+    font-family: Arial;
+    text-align: center;
+    width: 100vw;
+    /* position: absolute; */
+    padding-bottom: 6vh;
+}
+
+.sliderFrame {
+    /* Define a box shadow and make the section 75% of screen width and 75% of screen height */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 75vw;
+    height: 75vh;
+    border-radius: 20px;
+    margin: auto;
+    border: 5px solid white;
+    align-content: center;
+}
+
+.slideImages {
+    /* Format the images such that it is not visible normally */
+    border-radius: 15px;
+    width: 74vw;
+    height: 73vh;
+    margin-left: 0.5vw;
+    display: none;
+    animation: imageAnimation forwards .5s;
+}
+
+@keyframes imageAnimation {
+    from {scale: 1.25; opacity: 0%;}
+    to {scale: 1.0; opacity: 100%;}
+}
+
+.buttonL {
+    /* Format button to appear on left */
+    z-index: 1;
+    position: absolute;
+    top: 53vh;
+    left: 13.5vw;
+    border: 0;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 500px;
+    width: 40px;
+    height: 40px;
+}
+
+.buttonL:hover {
+    background: rgba(255, 255, 255, 1.0);
+}
+
+.buttonR {
+    /* Format button to appear on right */
+    z-index: 1;
+    position: absolute;
+    top: 53vh;
+    right: 13.5vw;
+    border: 0;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 500px;
+    width: 40px;
+    height: 40px;
+}
+
+.buttonR:hover {
+    background: rgba(255, 255, 255, 1.0);
+}
+.pageIndicator {
+    /* Format page indicator */
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    position: absolute;
+    width: 7vw;
+    height: 4vh;
+    left: 45.25vw;
+    bottom: 10vh;
+    border-radius: 50px;
+    font-family: Arial;
+    display: inline-block;
+    align-content: center;
+}
+
+.pageIndicator p {
+    padding-left: 1vw;
+    width: fit-content;
+    text-align: center;
+    display: inline-block;
+}
+
+.pageIndicator button {
+    /* Format slideshow button */
+    outline: none;
+    border: 1px solid gray;
+    margin-left: 1vw;
+    border-radius: 500px;
+    width: fit-content;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-top: 0.65vh;
+    padding-bottom: 0.65vh;
+}
+
+/* Using a media query to add responsiveness to mobile */
+@media screen and (max-width: 800px) {
+    .sliderFrame {
+        height: 30vh;
+        width: 100%;
+    }
+
+    .slideImages {
+        height: 28vh;
+        width: 96.5vw;
+    }
+
+    .pageIndicator {
+        width: 15vw;
+        bottom: 23vh;
+        height: 3vh;
+    }
+
+    .pageIndicator p, .pageIndicator button {
+        width: fit-content;
+        font-size: small;
+        padding: 0;
+        margin: 0;
+    }
+
+    .pageIndicator button {
+        width: 5vw;
+        margin-left: 1.5vw;
+    }
+
+    .buttonL {
+        left: 3vw;
+        width: 30px;
+        height: 30px;
+    }
+
+    .buttonR {
+        right: 3vw;
+        width: 30px;
+        height: 30px;
+    }
+}
